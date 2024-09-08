@@ -1,0 +1,15 @@
+.Container {
+	background-image: url('../images/hero-banner-bg.png');
+
+}
+
+header section {
+	background: linear-gradient(to right, rgb(109 41 197 / 85%), rgb(54 13 209 / 85%));
+	/* opacity: 0.6; */
+	/* dislay: flex; */
+	color: white;
+	/* justify-content: center; */
+	height: 65vh;
+	display: flex;
+	flex-direction: column;
+}
