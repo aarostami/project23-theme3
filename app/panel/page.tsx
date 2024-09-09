@@ -28,9 +28,9 @@ import ThemeProvider from "@mui/system/ThemeProvider";
 import { createTheme } from "@mui/material/styles";
 import Main from './main/page'
 import Buttons from "./buttons/page";
-// import { usePathname, useSearchParams } from "next/navigation"
+import { usePathname, useSearchParams } from "next/navigation"
 import { useRouter, withRouter } from 'next/router'
-import Serv from './serv'
+// import Serv from './serv'
 
 /* const FirstRowStatis = dynamic(
 	() => import('../Components/Panel/FirstRowStatis'),
@@ -38,15 +38,15 @@ import Serv from './serv'
 	) */
 
 // const chContext = createContext('')
-	/* export async function parm() {
-		'use server'
-		return searchParams.size
-	} */
+/* export async function parm() {
+	'use server'
+	return searchParams.size
+} */
 // export const dynamic = 'force-dynamic'
 
 const Panel = (props: any, req: any) => {
 	console.log(props)
-	// const searchParams = useSearchParams()
+	const searchParams = useSearchParams()
 	// console.log(searchParams.size)
 	// console.log(props.searchParams)
 	const theme = createTheme({
@@ -97,12 +97,14 @@ const Panel = (props: any, req: any) => {
 				<Container maxWidth={'xl'}>
 					<IconButton onClick={() => setOpen(!open)}><MenuIcon /></IconButton>
 					{/* <IconButton onClick={() => open = !open}><MenuIcon /></IconButton> */}
-					{/* {(props.searchParams.buttons == 'true') ? <Buttons /> : <Main />} */}
-					{/* {(props.parm == 'true') ? <Buttons /> : <Main />} */}
-					{/* {(searchParams.size == 1) ? <Buttons /> : <Main />} */}
+						{/* {(props.searchParams.buttons == 'true') ? <Buttons /> : <Main />} */}
 					<Suspense fallback={<h2>load</h2>}>
+						{(searchParams.size == 1) ? <Buttons /> : <Main />}
+					</Suspense>
+					{/* {(props.parm == 'true') ? <Buttons /> : <Main />} */}
+					{/* <Suspense fallback={<h2>load</h2>}>
 						<Serv />
-						</Suspense>
+					</Suspense> */}
 					{/* <Serv /> */}
 				</Container>
 			</main>
