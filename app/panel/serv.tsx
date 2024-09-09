@@ -1,3 +1,4 @@
+'use server'
 import Main from './main/page'
 import Buttons from "./buttons/page";
 import { usePathname, useSearchParams } from "next/navigation"

@@ -40,7 +40,7 @@ import Serv from './serv'
 // const chContext = createContext('')
 
 const Panel = (props: any, req: any) => {
-	
+
 	// console.log(props.searchParams)
 	// console.log(searchParams.size)
 	const theme = createTheme({
@@ -91,7 +91,9 @@ const Panel = (props: any, req: any) => {
 					<IconButton onClick={() => setOpen(!open)}><MenuIcon /></IconButton>
 					{/* {(props.searchParams.buttons == 'true') ? <Buttons /> : <Main />} */}
 					{/* {(searchParams.size == 1) ? <Buttons /> : <Main />} */}
-					<Serv />
+					<Suspense fallback={<h2>load</h2>}>
+						<Serv />
+					</Suspense>
 				</Container>
 			</main>
 			{/* </Grid> */}
