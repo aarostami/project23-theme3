@@ -30,6 +30,7 @@ import Main from './main/page'
 import Buttons from "./buttons/page";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useRouter, withRouter } from 'next/router'
+import Serv from './serv'
 
 /* const FirstRowStatis = dynamic(
 	() => import('../Components/Panel/FirstRowStatis'),
@@ -39,7 +40,9 @@ import { useRouter, withRouter } from 'next/router'
 // const chContext = createContext('')
 
 const Panel = (props: any, req: any) => {
+	const searchParams = useSearchParams()
 	// console.log(props.searchParams)
+	console.log(searchParams.size)
 	const theme = createTheme({
 		typography: {
 			fontFamily: 'Byekan'
@@ -86,9 +89,9 @@ const Panel = (props: any, req: any) => {
 			<main style={{ width: open == true ? '70%' : '100%', backgroundColor: '#eee', paddingBottom: '3rem', flexGrow: 1 }}>
 				<Container maxWidth={'xl'}>
 					<IconButton onClick={() => setOpen(!open)}><MenuIcon /></IconButton>
-					<Suspense fallback={<h2>load</h2>}>
-						{(props.searchParams.buttons == 'true') ? <Buttons /> : <Main />}
-					</Suspense>
+						{/* {(props.searchParams.buttons == 'true') ? <Buttons /> : <Main />} */}
+						{(searchParams.size == 1) ? <Buttons /> : <Main />}
+						{/* <Serv /> */}
 				</Container>
 			</main>
 			{/* </Grid> */}
@@ -98,7 +101,5 @@ const Panel = (props: any, req: any) => {
 		{/* </chContext.Provider> */}
 	</ThemeProvider>
 }
-
-export const dynamicParams = true
 
 export default Panel
