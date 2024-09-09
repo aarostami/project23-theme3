@@ -63,16 +63,16 @@ const Panel = (props: any, req: any) => {
 		setHash(t)
 	} */
 	// useEffect(() => {
-		// setHash(window.location.hash)
-		/* if(window.location.hash == '#buttons') {
-			setHash('#buttons')
-		} */
-		// h.current = window.location.hash
-		/* if(h == '#buttons') {
-			h.current = '#buttons'
-		} */
-		// if (props.searchParams.buttons == true) { console.log('hhhhhh') }
-		// console.log(hash)
+	// setHash(window.location.hash)
+	/* if(window.location.hash == '#buttons') {
+		setHash('#buttons')
+	} */
+	// h.current = window.location.hash
+	/* if(h == '#buttons') {
+		h.current = '#buttons'
+	} */
+	// if (props.searchParams.buttons == true) { console.log('hhhhhh') }
+	// console.log(hash)
 	// }, [props.searchParams.buttons])
 	// return <chContext.Provider value={hash}>
 	return <ThemeProvider theme={theme}>
@@ -89,9 +89,11 @@ const Panel = (props: any, req: any) => {
 			<main style={{ width: open == true ? '70%' : '100%', backgroundColor: '#eee', paddingBottom: '3rem', flexGrow: 1 }}>
 				<Container maxWidth={'xl'}>
 					<IconButton onClick={() => setOpen(!open)}><MenuIcon /></IconButton>
-						{/* {(props.searchParams.buttons == 'true') ? <Buttons /> : <Main />} */}
+					{/* {(props.searchParams.buttons == 'true') ? <Buttons /> : <Main />} */}
+					<Suspense fallback={<h2>load</h2>}>
 						{(searchParams.size == 1) ? <Buttons /> : <Main />}
-						{/* <Serv /> */}
+					</Suspense>
+					{/* <Serv /> */}
 				</Container>
 			</main>
 			{/* </Grid> */}

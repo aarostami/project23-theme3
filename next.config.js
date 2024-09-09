@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	//output: 'export',
-	//basePath: '/project23-theme3',
+	output: 'export',
+	basePath: '/project23-theme3',
 	/* images: {
 		unoptimized: true
 	}, */
