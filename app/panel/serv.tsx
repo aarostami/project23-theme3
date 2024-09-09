@@ -3,7 +3,7 @@ import { Suspense } from 'react';
 import Main from './main/page'
 import Buttons from "./buttons/page";
 import { usePathname, useSearchParams } from "next/navigation"
-const Serv = async (props: any) => {
+const Serv = (props: any) => {
 	// console.log('ssss')
 	// console.log(props)
 	const searchParams = useSearchParams()

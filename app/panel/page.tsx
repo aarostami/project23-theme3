@@ -100,9 +100,7 @@ const Panel = (props: any, req: any) => {
 					{/* {(props.searchParams.buttons == 'true') ? <Buttons /> : <Main />} */}
 					{/* {(props.parm == 'true') ? <Buttons /> : <Main />} */}
 					{/* {(searchParams.size == 1) ? <Buttons /> : <Main />} */}
-					<Suspense fallback={<h2>load</h2>}>
 						<Serv />
-					</Suspense>
 					{/* <Serv /> */}
 				</Container>
 			</main>
