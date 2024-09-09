@@ -91,9 +91,9 @@ const Panel = (props: any, req: any) => {
 					<IconButton onClick={() => setOpen(!open)}><MenuIcon /></IconButton>
 					{/* {(props.searchParams.buttons == 'true') ? <Buttons /> : <Main />} */}
 					{/* {(searchParams.size == 1) ? <Buttons /> : <Main />} */}
-					<Suspense fallback={<h2>load</h2>}>
+					{/* <Suspense fallback={<h2>load</h2>}>
 						<Serv />
-					</Suspense>
+					</Suspense> */}
 				</Container>
 			</main>
 			{/* </Grid> */}
