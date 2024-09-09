@@ -30,7 +30,7 @@ import Main from './main/page'
 import Buttons from "./buttons/page";
 // import { usePathname, useSearchParams } from "next/navigation"
 import { useRouter, withRouter } from 'next/router'
-import Serv from './serv'
+// import Serv from './serv'
 
 /* const FirstRowStatis = dynamic(
 	() => import('../Components/Panel/FirstRowStatis'),
