@@ -10,7 +10,7 @@ import SecondRowStatis from "../Components/Panel/SecondRowStatis";
 import Empolyees from "../Components/Panel/Employees";
 import ReceiveMessage from "../Components/Panel/ReceiveMessage";
 import LastProjects from "../Components/Panel/LastProjects";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import ChevronLeft from '@mui/icons-material/ChevronLeft'
@@ -28,7 +28,7 @@ import ThemeProvider from "@mui/system/ThemeProvider";
 import { createTheme } from "@mui/material/styles";
 import Main from './main/page'
 import Buttons from "./buttons/page";
-// import { usePathname, useSearchParams } from "next/navigation"
+import { usePathname, useSearchParams } from "next/navigation"
 import { useRouter, withRouter } from 'next/router'
 // import Serv from './serv'
 
@@ -38,11 +38,16 @@ import { useRouter, withRouter } from 'next/router'
 	) */
 
 // const chContext = createContext('')
+	/* export async function parm() {
+		'use server'
+		return searchParams.size
+	} */
+export const dynamic = 'force-static'
 
 const Panel = (props: any, req: any) => {
-
+	const searchParams = useSearchParams()
+	console.log(searchParams.size)
 	// console.log(props.searchParams)
-	// console.log(searchParams.size)
 	const theme = createTheme({
 		typography: {
 			fontFamily: 'Byekan'
