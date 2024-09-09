@@ -42,7 +42,7 @@ import Serv from './serv'
 		'use server'
 		return searchParams.size
 	} */
-export const dynamic = 'force-dynamic'
+// export const dynamic = 'force-dynamic'
 
 const Panel = (props: any, req: any) => {
 	console.log(props)
@@ -55,6 +55,7 @@ const Panel = (props: any, req: any) => {
 		}
 	})
 	const [open, setOpen] = useState(true)
+	// var open = true
 	// const [hash, setHash] = useState(props.searchParams.buttons)
 	// const path = usePathname()
 	// const path2 = useSearchParams()
@@ -95,13 +96,14 @@ const Panel = (props: any, req: any) => {
 			<main style={{ width: open == true ? '70%' : '100%', backgroundColor: '#eee', paddingBottom: '3rem', flexGrow: 1 }}>
 				<Container maxWidth={'xl'}>
 					<IconButton onClick={() => setOpen(!open)}><MenuIcon /></IconButton>
+					{/* <IconButton onClick={() => open = !open}><MenuIcon /></IconButton> */}
 					{/* {(props.searchParams.buttons == 'true') ? <Buttons /> : <Main />} */}
 					{/* {(props.parm == 'true') ? <Buttons /> : <Main />} */}
 					{/* {(searchParams.size == 1) ? <Buttons /> : <Main />} */}
-					{/* <Suspense fallback={<h2>load</h2>}>
+					<Suspense fallback={<h2>load</h2>}>
 						<Serv />
-					</Suspense> */}
-					<Serv parm={props} />
+					</Suspense>
+					{/* <Serv /> */}
 				</Container>
 			</main>
 			{/* </Grid> */}

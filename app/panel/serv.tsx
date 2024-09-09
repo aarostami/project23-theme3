@@ -1,10 +1,9 @@
 'use client'
+import { Suspense } from 'react';
 import Main from './main/page'
 import Buttons from "./buttons/page";
 import { usePathname, useSearchParams } from "next/navigation"
-// import Panel from './page';
-export const experimental_ppr = true
-const Serv = (props: any) => {
+const Serv = async (props: any) => {
 	// console.log('ssss')
 	// console.log(props)
 	const searchParams = useSearchParams()
@@ -13,7 +12,9 @@ const Serv = (props: any) => {
 		{/* <Panel parm='sss' /> */}
 		{/* {(props.searchParams.buttons == 'true') ? <Buttons /> : <Main />} */}
 		{/* {(props.parm.searchParams?.buttons == 'true') ? <Buttons /> : <Main />} */}
-		{(searchParams.size == 1) ? <Buttons /> : <Main />}
+		<Suspense fallback={<h2>load</h2>}>
+			{(searchParams.size == 1) ? <Buttons /> : <Main />}
+		</Suspense>
 	</>
 }
 
