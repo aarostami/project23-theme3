@@ -44,9 +44,15 @@ import { useRouter, withRouter } from 'next/router'
 } */
 // export const dynamic = 'force-dynamic'
 
+function Paramcomponent() {
+	const searchParams = useSearchParams()
+	return <>
+		{(searchParams.size == 1) ? <Buttons /> : <Main />}
+	</>
+}
+
 const Panel = (props: any, req: any) => {
 	console.log(props)
-	const searchParams = useSearchParams()
 	// console.log(searchParams.size)
 	// console.log(props.searchParams)
 	const theme = createTheme({
@@ -97,9 +103,10 @@ const Panel = (props: any, req: any) => {
 				<Container maxWidth={'xl'}>
 					<IconButton onClick={() => setOpen(!open)}><MenuIcon /></IconButton>
 					{/* <IconButton onClick={() => open = !open}><MenuIcon /></IconButton> */}
-						{/* {(props.searchParams.buttons == 'true') ? <Buttons /> : <Main />} */}
+					{/* {(props.searchParams.buttons == 'true') ? <Buttons /> : <Main />} */}
 					<Suspense fallback={<h2>load</h2>}>
-						{(searchParams.size == 1) ? <Buttons /> : <Main />}
+						{/* {(searchParams.size == 1) ? <Buttons /> : <Main />} */}
+						<Paramcomponent />
 					</Suspense>
 					{/* {(props.parm == 'true') ? <Buttons /> : <Main />} */}
 					{/* <Suspense fallback={<h2>load</h2>}>
