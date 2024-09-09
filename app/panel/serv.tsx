@@ -12,9 +12,9 @@ const Serv = (props: any) => {
 		{/* <Panel parm='sss' /> */}
 		{/* {(props.searchParams.buttons == 'true') ? <Buttons /> : <Main />} */}
 		{/* {(props.parm.searchParams?.buttons == 'true') ? <Buttons /> : <Main />} */}
-		<Suspense fallback={<h2>load</h2>}>
+		{/* <Suspense fallback={<h2>load</h2>}> */}
 			{(searchParams.size == 1) ? <Buttons /> : <Main />}
-		</Suspense>
+		{/* </Suspense> */}
 	</>
 }
 
