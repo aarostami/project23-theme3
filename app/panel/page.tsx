@@ -28,9 +28,9 @@ import ThemeProvider from "@mui/system/ThemeProvider";
 import { createTheme } from "@mui/material/styles";
 import Main from './main/page'
 import Buttons from "./buttons/page";
-import { usePathname, useSearchParams } from "next/navigation"
+// import { usePathname, useSearchParams } from "next/navigation"
 import { useRouter, withRouter } from 'next/router'
-// import Serv from './serv'
+import Serv from './serv'
 
 /* const FirstRowStatis = dynamic(
 	() => import('../Components/Panel/FirstRowStatis'),
@@ -42,11 +42,12 @@ import { useRouter, withRouter } from 'next/router'
 		'use server'
 		return searchParams.size
 	} */
-export const dynamic = 'force-static'
+export const dynamic = 'force-dynamic'
 
 const Panel = (props: any, req: any) => {
-	const searchParams = useSearchParams()
-	console.log(searchParams.size)
+	console.log(props)
+	// const searchParams = useSearchParams()
+	// console.log(searchParams.size)
 	// console.log(props.searchParams)
 	const theme = createTheme({
 		typography: {
@@ -95,10 +96,12 @@ const Panel = (props: any, req: any) => {
 				<Container maxWidth={'xl'}>
 					<IconButton onClick={() => setOpen(!open)}><MenuIcon /></IconButton>
 					{/* {(props.searchParams.buttons == 'true') ? <Buttons /> : <Main />} */}
+					{/* {(props.parm == 'true') ? <Buttons /> : <Main />} */}
 					{/* {(searchParams.size == 1) ? <Buttons /> : <Main />} */}
 					{/* <Suspense fallback={<h2>load</h2>}>
 						<Serv />
 					</Suspense> */}
+					<Serv parm={props} />
 				</Container>
 			</main>
 			{/* </Grid> */}

@@ -5,9 +5,9 @@ const nextConfig = {
 	images: {
 		unoptimized: true
 	},
-	experimental: {
+	/* experimental: {
 		ppr: true
-	},
+	}, */
 	typescript: {
 		// !! WARN !!
 		// Dangerously allow production builds to successfully complete even if
