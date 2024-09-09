@@ -28,7 +28,7 @@ import ThemeProvider from "@mui/system/ThemeProvider";
 import { createTheme } from "@mui/material/styles";
 import Main from './main/page'
 import Buttons from "./buttons/page";
-import { usePathname, useSearchParams } from "next/navigation";
+// import { usePathname, useSearchParams } from "next/navigation"
 import { useRouter, withRouter } from 'next/router'
 import Serv from './serv'
 
@@ -40,9 +40,9 @@ import Serv from './serv'
 // const chContext = createContext('')
 
 const Panel = (props: any, req: any) => {
-	const searchParams = useSearchParams()
+	
 	// console.log(props.searchParams)
-	console.log(searchParams.size)
+	// console.log(searchParams.size)
 	const theme = createTheme({
 		typography: {
 			fontFamily: 'Byekan'
@@ -90,10 +90,8 @@ const Panel = (props: any, req: any) => {
 				<Container maxWidth={'xl'}>
 					<IconButton onClick={() => setOpen(!open)}><MenuIcon /></IconButton>
 					{/* {(props.searchParams.buttons == 'true') ? <Buttons /> : <Main />} */}
-					<Suspense fallback={<h2>load</h2>}>
-						{(searchParams.size == 1) ? <Buttons /> : <Main />}
-					</Suspense>
-					{/* <Serv /> */}
+					{/* {(searchParams.size == 1) ? <Buttons /> : <Main />} */}
+					<Serv />
 				</Container>
 			</main>
 			{/* </Grid> */}
