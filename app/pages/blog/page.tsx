@@ -15,7 +15,7 @@ import post2 from '../../images/blog/lastpost/post2.jpg'
 import post3 from '../../images/blog/lastpost/post3.jpg'
 
 const blog = () => {
-	console.log('helll')
+	
 	return <>
 		<Common />
 		<Container>

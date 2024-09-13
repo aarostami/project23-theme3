@@ -1,8 +1,5 @@
+import { Container } from '@mui/system'
 import Grid from '@mui/material/Unstable_Grid2';
-import Heading from '../Heading'
-import Input from '@mui/material/Input'
-import Button from '@mui/material/Button';
-import { Container, Box, unstable_styleFunctionSx, SxProps, bgcolor, styled, ThemeProvider, style } from '@mui/system'
 import Typography from '@mui/material/Typography';
 import Image from 'next/image';
 import serverEmail from '../../images/006-server-3.png'

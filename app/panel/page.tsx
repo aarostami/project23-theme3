@@ -104,7 +104,9 @@ const Panel = (props: any, req: any) => {
 					<IconButton onClick={() => setOpen(!open)}><MenuIcon /></IconButton>
 					{/* <IconButton onClick={() => open = !open}><MenuIcon /></IconButton> */}
 					{/* {(props.searchParams.buttons == 'true') ? <Buttons /> : <Main />} */}
+					{/* bejoz in ravesh run dar local ok hast ama dar github actions workflow error mide */}
 					<Suspense fallback={<h2>load</h2>}>
+					{/* chon const searchParams = useSearchParams() bayad dar Suspense taarif bashe pas nemishe dar Panel taarif beshe va az function component balla estefade kardim */}
 						{/* {(searchParams.size == 1) ? <Buttons /> : <Main />} */}
 						<Paramcomponent />
 					</Suspense>

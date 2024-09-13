@@ -1,23 +1,11 @@
-import { useState, useEffect } from "react";
-import { Container } from "@mui/system";
-import { Divider, Typography } from "@mui/material";
+import { Divider, Typography, Card, CardContent, Avatar, List, ListItem, ListItemAvatar, ListItemText } from "@mui/material";
 import Grid from '@mui/system/Unstable_Grid'
-import Card from '@mui/material/Card'
-import CardHeader from '@mui/material/CardHeader'
-import CardContent from '@mui/material/CardContent'
-import IconButton from "@mui/material/IconButton";
-import MoreVertIcon from '@mui/icons-material/MoreVert'
 import Image from "next/image";
 import avatar1 from '../../images/panel/avatar-1.jpg'
 import avatar2 from '../../images/panel/avatar-2.jpg'
 import avatar3 from '../../images/panel/avatar-3.jpg'
 import avatar4 from '../../images/panel/avatar-4.jpg'
 import avatar5 from '../../images/panel/avatar-5.jpg'
-import Avatar from "@mui/material/Avatar";
-import List from '@mui/material/List'
-import ListItem from '@mui/material/ListItem'
-import ListItemAvatar from '@mui/material/ListItemAvatar'
-import ListItemText from '@mui/material/ListItemText'
 import Cardheader from "./Cardheader";
 
 const ReceiveMessage = () => {

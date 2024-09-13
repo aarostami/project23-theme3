@@ -1,23 +1,8 @@
-import { useState, useEffect } from "react";
-import { Box, Divider, Menu, MenuItem, Typography } from "@mui/material";
-import CardHeader from '@mui/material/CardHeader'
-import IconButton from "@mui/material/IconButton";
-import MoreVertIcon from '@mui/icons-material/MoreVert'
-import dynamic from "next/dynamic";
-import Drawer from "@mui/material/Drawer";
-import ChevronLeft from '@mui/icons-material/ChevronLeft'
+import { useState } from "react";
+import { Typography, Drawer, List, ListSubheader, ListItem, ListItemButton, ListItemIcon, ListItemText, styled, Stack } from "@mui/material";
+import avatar from '../../images/panel/avatar-1.jpg'
 import ChevronRight from '@mui/icons-material/ChevronRight'
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import Avatar from "@mui/material/Avatar";
-import avatar from '../../images/panel/avatar-1.jpg'
-import Image from "next/image";
-import MenuIcon from '@mui/icons-material/Menu'
-import List from "@mui/material/List";
-import ListSubheader from "@mui/material/ListSubheader";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
 import FormatUnderlinedIcon from '@mui/icons-material/FormatUnderlined';
 import InvertColorsIcon from '@mui/icons-material/InvertColors';
 import ViewListIcon from '@mui/icons-material/ViewList';
@@ -29,15 +14,16 @@ import FilterNoneIcon from '@mui/icons-material/FilterNone';
 import LayersIcon from '@mui/icons-material/Layers';
 import Collapse from "@mui/material/Collapse";
 import ExpandMore from '@mui/icons-material/ExpandMore'
+import Badge from '@mui/icons-material/Badge'
+import SettingsIcon from '@mui/icons-material/Settings';
+import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
+import MenuIcon from '@mui/icons-material/Menu'
+import ChevronLeft from '@mui/icons-material/ChevronLeft'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import dynamic from "next/dynamic"
+import Image from "next/image";
 import DrawerSideFLevel from "./DrawerSideFLevel";
 import DrawerSideSLevel from "./DrawerSideSLevel";
-import Badge from '@mui/icons-material/Badge'
-import { styled } from '@mui/material/styles'
-import Stack from '@mui/material/Stack'
-import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
-import SettingsIcon from '@mui/icons-material/Settings';
-
 
 const DrawerSide = ({ OpProp }: any) => {
 	const [open1, setOpen1] = useState(false)
@@ -189,7 +175,7 @@ const DrawerSide = ({ OpProp }: any) => {
 					<SettingsIcon sx={{ fontSize: '15px' }} />
 					<PowerSettingsNewIcon sx={{ fontSize: '15px' }} />
 				</Stack>
-				<List sx={{display: 'flex',flexDirection: 'column', rowGap: '1rem', overflow: 'hidden'}}>
+				<List sx={{ display: 'flex', flexDirection: 'column', rowGap: '1rem', overflow: 'hidden' }}>
 					<DrawerSideFLevel {...{ icon: <DashboardIcon fontSize="small" sx={{ ':hover': { color: '#8bc3fa' } }} />, link: '' }} />
 					<DrawerSideFLevel {...{ icon: <FormatUnderlinedIcon fontSize="small" sx={{ ':hover': { color: '#8bc3fa' } }} />, link: '?buttons=true' }} />
 					<ListItem sx={{ py: '0' }}>

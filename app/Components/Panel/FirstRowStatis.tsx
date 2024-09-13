@@ -1,30 +1,20 @@
 'use client'
 import { useState, useEffect } from "react";
-import Input from '@mui/material/Input'
+import { Container, Stack } from "@mui/system";
 import Grid from '@mui/material/Unstable_Grid2'
-import { Container, Stack, padding, width } from "@mui/system";
-import { Box, Divider, Menu, MenuItem, Typography } from "@mui/material";
-import Card from '@mui/material/Card'
-import CardHeader from '@mui/material/CardHeader'
-import CardContent from '@mui/material/CardContent'
-import IconButton from "@mui/material/IconButton";
-import MoreVertIcon from '@mui/icons-material/MoreVert'
+import { Box, LinearProgress,Input, CardContent, Card, Typography, Chip, InputAdornment, Badge, styled } from "@mui/material";
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts'
-import LinearProgress from "@mui/material/LinearProgress";
-import dynamic from "next/dynamic";
 // import Chart from 'chart.js/auto'
-import { getRelativePosition } from 'chart.js/helpers'
-import { Doughnut } from "react-chartjs-2";
-import { Chart, ArcElement, Tooltip, Legend } from 'chart.js'
 import CircularProgress from "@mui/material/CircularProgress";	//rahat taresh: https://mui.com/x/react-charts/pie-demo/
-import Chip from "@mui/material/Chip";
+import { Chart, ArcElement, Tooltip, Legend } from 'chart.js'
 import MovingIcon from '@mui/icons-material/Moving'
-import Cardheader from "./Cardheader";
-import InputAdornment from "@mui/material/InputAdornment";
 import Search from '@mui/icons-material/Search'
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
-import Badge from "@mui/material/Badge";
-import { styled } from '@mui/material/styles'
+import Cardheader from "./Cardheader";
+import dynamic from "next/dynamic";
+import MoreVertIcon from '@mui/icons-material/MoreVert'
+import { getRelativePosition } from 'chart.js/helpers'
+import { Doughnut } from "react-chartjs-2";
 
 /* const FirstChart = dynamic(
 	() => import 
@@ -38,7 +28,6 @@ const FirstRowStatis = () => {
 
 		}
 	}) */
-	// console.log("fffss")
 	Chart.register(ArcElement)
 	const [show, setShow] = useState(false)
 	const [anchor, setAnchor] = useState<null | HTMLElement>(null)

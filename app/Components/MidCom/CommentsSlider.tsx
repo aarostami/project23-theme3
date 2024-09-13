@@ -1,8 +1,6 @@
 import Grid from '@mui/material/Unstable_Grid2';
 import Heading from '../Heading'
-import Input from '@mui/material/Input'
-import Button from '@mui/material/Button';
-import { Container, Box, unstable_styleFunctionSx, SxProps, bgcolor, styled, ThemeProvider, style } from '@mui/system'
+import { Container, Box } from '@mui/system'
 import Typography from '@mui/material/Typography';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -15,7 +13,6 @@ import comment2 from '../../images/comments/testimonial2.png'
 import comment3 from '../../images/comments/testimonial3.png'
 
 const CommentsSlider = () => {
-
 
 	return <section className='commentsSlider' style={{ padding: '2rem 0', backgroundColor: '#ddd' }}>
 		<Heading {...{ text: 'نظر مشتریان راضی ما' }} />

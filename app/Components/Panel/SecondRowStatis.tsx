@@ -1,16 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Grid from '@mui/material/Unstable_Grid2'
-import { Container } from "@mui/system";
-import { Divider, Typography } from "@mui/material";
-import Card from '@mui/material/Card'
-import CardHeader from '@mui/material/CardHeader'
-import CardContent from '@mui/material/CardContent'
-import IconButton from "@mui/material/IconButton";
-import MoreVertIcon from '@mui/icons-material/MoreVert'
+import { Typography, Card, CardContent } from "@mui/material";
 import Cardheader from "./Cardheader";
 import { Doughnut, Bar, Line } from "react-chartjs-2";
 import { Chart, ArcElement, Tooltip, Legend, CategoryScale, BarElement, Title, LinearScale, PointElement, LineElement } from 'chart.js'
-
 
 const SecondRowStatis = () => {
 	const [el, setEl] = useState()
@@ -97,7 +90,7 @@ const SecondRowStatis = () => {
 								pointStyle: false,
 							}
 						]
-					}} options={{borderColor: 'red', responsive: true, maintainAspectRatio: false }} style={{height: '18rem'}} />
+					}} options={{ borderColor: 'red', responsive: true, maintainAspectRatio: false }} style={{ height: '18rem' }} />
 				</CardContent>
 			</Card>
 		</Grid>

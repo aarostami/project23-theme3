@@ -1,11 +1,8 @@
 'use client'
-import Typography from "@mui/material/Typography"
-import Button from '@mui/material/Button'
-import Card from '@mui/material/Card'
+import { Button, Card } from '@mui/material'
 import Cardheader from '../../Components/Panel/Cardheader'
 
 const Buttons = () => {
-
 
 	return <>
 		<Card>

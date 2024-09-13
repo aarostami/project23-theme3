@@ -1,15 +1,10 @@
 'use client'
+import { Box, Container } from '@mui/system';
 import Grid from '@mui/material/Unstable_Grid2';
+import { Input, Button, FormGroup, List, ListItem, Stack, Typography } from '@mui/material'
 import Heading from '../../Components/Heading'
-import Input from '@mui/material/Input'
-import Button from '@mui/material/Button';
-import { Box, Container, borderBottom } from '@mui/system';
-import Checkbox from '@mui/material/Checkbox'
-import FormGroup from '@mui/material/FormGroup'
-import FormControlLabel from '@mui/material/FormControlLabel'
 import Services from '../../Components/MidCom/CommentsSlider';
 import CommentsSlider from '../../Components/MidCom/CommentsSlider';
-import { List, ListItem, Stack, Typography } from '@mui/material';
 import Header from '../../Components/Header'
 import Footer from '../../Components/Footer'
 import Common from '../common';
@@ -62,7 +57,7 @@ const contact = () => {
 					</Grid>
 				</Grid>
 			</FormGroup>
-		</Container>	
+		</Container>
 		{/* <Footer /> */}
 	</>
 	)

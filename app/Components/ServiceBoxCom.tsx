@@ -1,7 +1,4 @@
-
-import Input from '@mui/material/Input'
-import Button from '@mui/material/Button';
-import { Container, Box, unstable_styleFunctionSx, SxProps, bgcolor, styled, ThemeProvider, style } from '@mui/system'
+import { unstable_styleFunctionSx, SxProps, bgcolor, styled, ThemeProvider, style } from '@mui/system'
 import Typography from '@mui/material/Typography';
 
 const ServiceBoxCom = () => {
@@ -18,10 +15,10 @@ const ServiceBoxCom = () => {
 	})
 
 	return <ServiceBox className='ServiceBox'>
-	{/* <Image src={unlock} alt='unlock' /> */}
-	<Typography variant='h6'>سرور امن</Typography>
-	<Typography>برای برپاسازی یک سایت، اول از همه نیاز به یک مکان روی اینترنت داریم که بتوانیم فایل‌های سایت را روی آن بریزیم</Typography>
-</ServiceBox>
+		{/* <Image src={unlock} alt='unlock' /> */}
+		<Typography variant='h6'>سرور امن</Typography>
+		<Typography>برای برپاسازی یک سایت، اول از همه نیاز به یک مکان روی اینترنت داریم که بتوانیم فایل‌های سایت را روی آن بریزیم</Typography>
+	</ServiceBox>
 
 
 }

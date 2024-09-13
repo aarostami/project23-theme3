@@ -1,9 +1,6 @@
+import { Container, Box} from '@mui/system'
 import Grid from '@mui/material/Unstable_Grid2';
-import Heading from '../Heading'
-import Input from '@mui/material/Input'
-import Button from '@mui/material/Button';
-import { Container, Box, unstable_styleFunctionSx, SxProps, bgcolor, styled, ThemeProvider, style } from '@mui/system'
-import Typography from '@mui/material/Typography';
+import { Button, Typography } from '@mui/material';
 import Image from 'next/image';
 
 const Prices = () => {
@@ -26,7 +23,7 @@ const Prices = () => {
 									<Typography variant='body1'>پشتیبانی همه روزه</Typography>
 									<Typography variant='body1'>ساخت 4 ایمیل</Typography>
 									<hr color='#ddd' />
-									<Button variant='outlined' color='inherit' sx={{ borderRadius: '30px', p: '0.7rem 3rem', ':hover': { background: 'linear-gradient(to right, rgb(109 41 197 / 85%), rgb(54 13 209 / 85%))',color: 'white' } }}>انتخاب</Button>
+									<Button variant='outlined' color='inherit' sx={{ borderRadius: '30px', p: '0.7rem 3rem', ':hover': { background: 'linear-gradient(to right, rgb(109 41 197 / 85%), rgb(54 13 209 / 85%))', color: 'white' } }}>انتخاب</Button>
 								</div>
 							</Box>
 						</Grid>
@@ -43,7 +40,7 @@ const Prices = () => {
 									<Typography variant='body1'>پشتیبانی همه روزه</Typography>
 									<Typography variant='body1'>ساخت 10 ایمیل</Typography>
 									<hr color='#ddd' />
-									<Button variant='outlined' color='inherit' sx={{ borderRadius: '30px', p: '0.7rem 3rem', ':hover': { background: 'linear-gradient(to right, rgb(109 41 197 / 85%), rgb(54 13 209 / 85%))',color: 'white' } }}>انتخاب</Button>
+									<Button variant='outlined' color='inherit' sx={{ borderRadius: '30px', p: '0.7rem 3rem', ':hover': { background: 'linear-gradient(to right, rgb(109 41 197 / 85%), rgb(54 13 209 / 85%))', color: 'white' } }}>انتخاب</Button>
 								</div>
 							</Box>
 						</Grid>
@@ -60,7 +57,7 @@ const Prices = () => {
 									<Typography variant='body1'>پشتیبانی همه روزه</Typography>
 									<Typography variant='body1'>ایمیل نامحدود</Typography>
 									<hr color='#ddd' />
-									<Button variant='outlined' color='inherit' sx={{ borderRadius: '30px', p: '0.7rem 3rem', ':hover': { background: 'linear-gradient(to right, rgb(109 41 197 / 85%), rgb(54 13 209 / 85%))',color: 'white' } }}>انتخاب</Button>
+									<Button variant='outlined' color='inherit' sx={{ borderRadius: '30px', p: '0.7rem 3rem', ':hover': { background: 'linear-gradient(to right, rgb(109 41 197 / 85%), rgb(54 13 209 / 85%))', color: 'white' } }}>انتخاب</Button>
 								</div>
 							</Box>
 						</Grid>

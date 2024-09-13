@@ -1,29 +1,17 @@
 'use client'
+// 'use server'
 import '../header.css'
-import Button from '@mui/material/Button'
-import Box from '@mui/material/Box'
-import Container from '@mui/material/Container'
-import Menu from '@mui/material/Menu'
-import MenuItem from '@mui/material/MenuItem'
+import { useState } from 'react'
+import Grid from '@mui/material/Unstable_Grid2'
+// import Grid from '@mui/system/Unstable_Grid/Grid'
+import { Button, Box, Container, Typography, Drawer, List, ListItem, Divider, styled } from '@mui/material'
 import Link from 'next/link'
-// import {} from '@mui/material/Unstable_Grid2'
-// import {} from '@mui/system'
 import Image from 'next/image'
 import logo from '../images/logo.png'
 import hero from '../images/hero-banner-bg.png'
-import Grid from '@mui/material/Unstable_Grid2'
-import Typography from '@mui/material/Typography'
 import createTheme from '@mui/system/createTheme'
-import { styled } from '@mui/material/styles'
-import Drawer from '@mui/material/Drawer'
-import { useState } from 'react'
-import List from '@mui/material/List'
-import ListItem from '@mui/material/ListItem'
-import { Divider } from '@mui/material'
-// 'use server'
 
 export default function Header() {
-
 	// const Button = createTheme()
 	/* const Root = styled('div')(({theme}) => ({
 		[theme.breakpoints.down('md')]: {
@@ -134,7 +122,7 @@ export default function Header() {
 						<Typography variant='body1'>یک شرکت با فضایی عالی</Typography>
 						<Typography className='headTitle' variant='h2' textAlign={'center'}>فضای میزبانی قدرتمند</Typography>
 						<Typography variant='body1' width={'70%'} sx={{ textAlign: 'center', fontSize: {} }}>برای برپاسازی یک سایت، اول از همه نیاز به یک مکان روی اینترنت داریم که بتوانیم فایل‌های سایت را روی آن بریزیم.</Typography>
-						<Link href={'#search'} className='button' style={{ borderRadius: '20px', padding: '0.6rem 3rem',border: '1px solid white', fontSize: '1.1rem', }}>شروع</Link>
+						<Link href={'#search'} className='button' style={{ borderRadius: '20px', padding: '0.6rem 3rem', border: '1px solid white', fontSize: '1.1rem', }}>شروع</Link>
 					</Box>
 				</article>
 			</section>

@@ -1,10 +1,6 @@
-import { useState, useEffect } from "react";
 import Grid from '@mui/material/Unstable_Grid2'
+import { Typography, Card, CardContent } from "@mui/material";
 import { Container } from "@mui/system";
-import { Divider, Typography } from "@mui/material";
-import Card from '@mui/material/Card'
-import CardHeader from '@mui/material/CardHeader'
-import CardContent from '@mui/material/CardContent'
 import Image from "next/image";
 import avatar1 from '../../images/panel/avatar-1.jpg'
 import avatar2 from '../../images/panel/avatar-2.jpg'
