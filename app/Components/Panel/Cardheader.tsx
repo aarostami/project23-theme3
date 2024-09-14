@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Divider, Menu, MenuItem, Typography } from "@mui/material";
-import CardHeader from '@mui/material/CardHeader'
+import { Divider, Menu, MenuItem, Typography, CardHeader } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import MoreVertIcon from '@mui/icons-material/MoreVert'
 
